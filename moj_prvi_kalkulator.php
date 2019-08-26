@@ -27,9 +27,9 @@
     echo "Razlika unesenih brojeva je: " .($num1 - $num2);
     echo "<br>";
 
-    echo "Proizvod unesenih brojeva je: " .($num1 * $num1num2);
+    echo "Proizvod unesenih brojeva je: " .($num1 * $num2);
     echo "<br>";
 
-    echo "Količnik unesenih brojeva je:" .($num1 | $num2);
+    echo "Količnik unesenih brojeva je:" .($num1 / $num2);
     echo "<br>";
 ?>
