@@ -8,7 +8,7 @@
 
 <h1>Recursion Example #2: Reading a Tree of Files and Folders</h1>
 <form action="recursive.php" method="GET"> 
-    Želite direktorijum imena: <input type="search" name="branches" value="<?= $_GET["branches"] ?>"> 
+    Unesi ime direktorijuma i putanju do njega: <input type="search" name="branches" value="<?= $_GET["branches"] ?>"> 
     <input type="submit" value="Pretraži">
 </form>
 
