@@ -7,29 +7,64 @@
     <title>Moj prvi kalkulator</title>
 </head>
 <body>
-    
+<style>
+    body{
+        background-color: #ddd;
+    }
+    .calculator{
+        text-align: center;
+    }
+</style>
+
+<div class="container calculator">
+<h2>My first arithmetic calculator</h2>
+    <form>
+        <input type = "number" name="num1" placeholder="Broj 1">
+        <input type = "number" name="num2" placeholder="Broj 2">
+        <select name="operator">
+
+        <option>Prazno</option>
+        <option>Saberi</option>
+        <option>Oduzmi</option>
+        <option>Pomnoži</option>
+        <option>Podijeli</option>
+
+        </select>
+        <br><br>
+        <button type="submit" autofocus name="submit" value="submit">Izračunaj</button><br><br>
+    </form>
+    <h4>Rezultat je: </h4> 
+
+
+<?php 
+ 
+    if (isset($_GET['submit'])) {
+        $result1 = $_GET['num1'];
+        $result2 = $_GET['num2'];
+        $operator = $_GET['operator'];
+        switch ($operator) {
+            case "Prazno":
+            echo "<u>Unesite podatke!</u>";
+            break;
+            case "Saberi":
+            echo $result1 + $result2;
+            break;
+            case "Oduzmi":
+            echo $result1 - $result2;
+            break;
+            case "Pomnoži":
+            echo $result1 * $result2;
+            break;
+            case "Podijeli":
+            echo $result1 / $result2;
+            break;
+        }
+}
+
+?>
+
+
+</div>
+
 </body>
 </html>
-<h1>Moj prvi kalkulator sa aritmetičkim operacijama</h1>
-<form action="moj_prvi_kalkulator.php" method="GET">
-    Broj 1:<input type="number" name="num1">
-    Broj 2:<input type="number" name="num2">
-    <input type="submit">
-
-</form>
-<?php
-
-    $num1 = $_GET["num1"];
-    $num2 = $_GET["num2"];
-    echo "Zbir unesenih brojeva je: " . ($num1 + $num2);
-    echo "<br>";
-
-    echo "Razlika unesenih brojeva je: " .($num1 - $num2);
-    echo "<br>";
-
-    echo "Proizvod unesenih brojeva je: " .($num1 * $num2);
-    echo "<br>";
-
-    echo "Količnik unesenih brojeva je:" .($num1 / $num2);
-    echo "<br>";
-?>
